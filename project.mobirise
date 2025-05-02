@@ -1,0 +1,149 @@
+{
+  "settings": {
+    "name": "Site 2025-05-02 15:24",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "6.0.1",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/bittensor-image.png",
+    "mbrsiteDomain": "xnhnzeu5k8",
+    "imageResize": false,
+    "usedWebp": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 1,
+    "versionPublish": "6.0.1"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Bittensor™ | Official Website",
+        "meta_descr": "Bittensor is a decentralized, open-source protocol building a global AI marketplace. It incentivizes AI model development through TAO token rewards, fostering collaboration and democratizing access to AI resources. Built on Substrate, it uses a unique consensus mechanism to reward top-performing models, aiming for a more equitable AI future.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".image-wrap img": {
+              "width": "100%",
+              "@media (min-width: 992px)": {
+                "display": "block",
+                "margin": "auto"
+              }
+            },
+            ".row-links": {
+              "width": "100%",
+              "justify-content": "center"
+            },
+            ".header-menu": {
+              "list-style": "none",
+              "display": "flex",
+              "justify-content": "center",
+              "flex-wrap": "wrap",
+              "padding": "0",
+              "margin-bottom": "0",
+              "li": {
+                "padding": "0 1rem 1rem 1rem",
+                "p": {
+                  "margin": "0"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".header-menu-item": {
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#ffffff",
+              "text-align": "left"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            }
+          },
+          "_name": "header16",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header16\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"imageWidth\" title=\"Image Width\" min=\"4\" max=\"12\" step=\"1\" value=\"8\" condition=\"showImage\">\n\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"range\" inline title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#260a30\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n  <div class=\"text-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center mb-4\" mbr-if=\"showImage\">\n      <div class=\"col-12 col-lg-{{imageWidth}}\">\n        <div class=\"image-wrap\" mbr-if=\"showImage\">\n          <img src=\"@PROJECT_PATH@/assets/images/bittensor.webp\" alt=\"Bittensor\">\n        </div>\n      </div>\n    </div>\n    <div class=\"row justify-content-center\">\n      <div class=\"col-md-12 content-head\">\n        <h1 class=\"mbr-section-title mbr-fonts-style mt-4\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n          <b><a href=\"http://web-bittensor.github.io\" class=\"text-primary\"><b>Bittensor</b></a>™ | Official Website</b></h1>\n        <p class=\"mbr-text mbr-fonts-style mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><b><a href=\"https://bittensor.com/\" class=\"text-primary\">Bittensor</a>: Decentralizing Intelligence and Rewarding Collaboration in the AI Era<br></b><br>Artificial intelligence is rapidly transforming our world, with the potential to revolutionize industries and solve some of humanity's most pressing challenges. However, the development and deployment of AI are often concentrated in the hands of a few large corporations, raising concerns about centralization, bias, and access. Bittensor is a groundbreaking open-source protocol that aims to decentralize the development and distribution of AI, creating a more equitable and collaborative ecosystem for innovation. This comprehensive guide will delve into the Bittensor network, exploring its key features, benefits, the TAO token's role, consensus mechanism, and its potential to reshape the future of AI.<br><br>Bittensor is a decentralized, blockchain-based protocol that enables a global network of machines to collaboratively develop and distribute artificial intelligence. It creates a marketplace where AI models can compete and be rewarded based on their performance, fostering innovation and democratizing access to AI resources. Bittensor distinguishes itself through its unique incentive mechanism, its focus on open collaboration, and its potential to unlock new frontiers in AI research and development.<br><br><b>Bittensor offers a comprehensive suite of features designed to support a decentralized AI ecosystem:<br></b><br>Decentralized Intelligence Marketplace: Bittensor creates a marketplace where AI models can compete and be rewarded based on their performance, fostering innovation and democratizing access to AI resources.<br>Substrate Blockchain: Bittensor is built on the Substrate blockchain framework, which provides a robust and scalable foundation for the network.<br>Proof-of-Stake Consensus: Bittensor utilizes a Proof-of-Stake (PoS) consensus mechanism, which is more energy-efficient than Proof-of-Work (PoW) and allows TAO token holders to participate in the network's validation process.<br>Yuma Consensus Algorithm: Bittensor employs a unique consensus algorithm called Yuma Consensus, which rewards AI models based on their performance and contribution to the network.<br>Subnets: Bittensor allows for the creation of subnets, which are specialized networks focused on specific AI tasks, such as image recognition, natural language processing, or financial modeling.<br>Open-Source Development: Bittensor is an open-source project, which means that anyone can contribute to its development and use its technology.<br>TAO Token: The TAO token is the native cryptocurrency of the Bittensor network and is used to incentivize participation, reward AI models, and govern the network.<br>Interoperability: Bittensor is designed to be interoperable with other blockchain networks and AI platforms, allowing for seamless integration and collaboration.<br>Bittensor offers several key benefits to AI developers, researchers, and users:<br><br><b>For AI Developers and Researchers:</b><br><b><br></b>Access to a Global Network of Resources: Bittensor provides access to a global network of computing power, data, and expertise, accelerating the development and deployment of AI models.<br>Incentives for Innovation: Bittensor rewards AI models based on their performance, creating a powerful incentive for innovation and improvement.<br>Decentralized Collaboration: Bittensor fosters collaboration among AI developers and researchers, breaking down silos and promoting the sharing of knowledge and resources.<br>Open-Source Ecosystem: Bittensor's open-source nature allows for greater transparency, auditability, and community involvement.<br><br><b>For Users of AI:<br></b>Democratized Access to AI: Bittensor democratizes access to AI resources, making them available to a wider range of users and applications.<br>More Diverse and Unbiased AI: Bittensor's decentralized nature helps to mitigate bias in AI models, leading to more equitable and reliable results.<br>Greater Transparency and Control: Bittensor provides users with greater transparency and control over the AI models they use.<br>New and Innovative AI Applications: Bittensor enables the development of new and innovative AI applications that were previously impossible.<br>The TAO token is the native cryptocurrency of the Bittensor network and plays a crucial role in its functioning. It serves several key purposes:<br><br>Incentivizing Participation: TAO tokens are used to incentivize participants in the Bittensor network, including AI model developers, validators, and data providers.<br>Rewarding AI Models: TAO tokens are awarded to AI models based on their performance, as determined by the Yuma Consensus algorithm.<br>Governance: TAO token holders have the right to participate in the governance of the Bittensor network by voting on proposals and influencing the platform's development and direction.<br>Staking: TAO tokens can be staked to earn rewards and participate in the network's validation process.<br>Access to Subnets: TAO tokens may be required to access and participate in specific subnets within the Bittensor network.<br>Bittensor utilizes a unique consensus mechanism called Yuma Consensus, which is designed to reward AI models based on their performance and contribution to<br> the network. The Yuma Consensus algorithm works by:<br><br>Submitting AI Models: AI developers submit their models to the Bittensor network.<br>Evaluating Performance: The network evaluates the performance of each model based on a variety of metrics, depending on the specific task.<br>Rewarding Top Performers: The top-performing models are rewarded with TAO tokens, based on their contribution to the network.<br>Adjusting Weights: The weights of the models are adjusted based on their performance, with better-performing models receiving higher weights.<br>Reaching Consensus: The network reaches consensus on the optimal set of models and their respective weights.<br>Security is a top priority for Bittensor, and the protocol employs a variety of security measures to protect the network and its users:<br><br>Proof-of-Stake Consensus: Bittensor's Proof-of-Stake (PoS) consensus mechanism is more energy-efficient and secure than Proof-of-Work (PoW).<br>Smart Contract Audits: Bittensor's smart contracts are regularly audited by reputable third-party firms to identify and address any potential vulnerabilities.<br>Decentralized Governance: Bittensor's decentralized governance model ensures that no single entity controls the network.<br>Bug Bounty Program: Bittensor offers a bug bounty program to reward security researchers who discover and report vulnerabilities in its platform.<br><br><b>Bittensor has the potential to revolutionize a wide range of industries and applications, including:<br></b><br>Healthcare: Developing AI models for disease diagnosis, drug discovery, and personalized medicine.<br>Finance: Creating AI models for fraud detection, risk management, and algorithmic trading.<br>Education: Building AI-powered tutoring systems and personalized learning platforms.<br>Robotics: Developing AI models for autonomous robots and intelligent automation systems.<br>Cybersecurity: Creating AI models for threat detection and prevention.<br>Bittensor is an ambitious and innovative project that aims to decentralize the development and distribution of AI. Its unique incentive mechanism, open-source nature, and potential to unlock new frontiers in AI research and development make it a project to watch closely. As the AI landscape continues to evolve, Bittensor is well-positioned to play a key role in shaping a more equitable and collaborative future for artificial intelligence.<br><br></p>\n        <div class=\"row-links mt-4\" mbr-if=\"menuItems > 0\">\n          <ul class=\"header-menu\" mbr-list mbr-list-grow=\"menuItems\">\n            <li mbr-text class=\"header-menu-item mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\"header-menu-item\">\n              <a href=\"#\" class=\"text-secondary\">Shop</a>\n            </li>\n            <li mbr-text class=\"header-menu-item mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\"header-menu-item\">\n              <a href=\"#\" class=\"text-secondary\">Collections</a>\n            </li>\n            <li mbr-text class=\"header-menu-item mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\"header-menu-item\">\n              <a href=\"#\" class=\"text-secondary\">About</a>\n            </li>\n            <li mbr-text class=\"header-menu-item mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\"header-menu-item\">\n              <a href=\"#\" class=\"text-secondary\">Press</a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uK2419sHlg",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header16-0"
+        }
+      ]
+    }
+  }
+}
